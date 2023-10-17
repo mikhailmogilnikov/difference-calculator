@@ -7,8 +7,11 @@ publish:
 lint:
 	npx eslint
 
+test:
+	npx jest
+
 link:
 	npm link  
 
-gendiff:
+gendiff-help:
 	node bin/gendiff.js -h
