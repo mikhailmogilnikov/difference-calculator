@@ -28,14 +28,10 @@ const compareFilesFlat = (parsedFile1, parsedFile2) => {
   }, []);
 };
 
-
-
-
 const buildString = (comparedArray) => {
   const strings = comparedArray.map((arr) => arr.join(' '));
   const joinStrings = strings.join('\n');
 
-	
   return `{\n${joinStrings}\n}`;
 };
 
