@@ -9,4 +9,8 @@ Compares two configuration files and shows a difference.
 
 ## stylish
 
+JSON-files:
 [![asciicast](https://asciinema.org/a/RVuJB1XALVATpW9r6jqDwW7FE.svg)](https://asciinema.org/a/RVuJB1XALVATpW9r6jqDwW7FE)
+
+YAML-files:
+[![asciicast](https://asciinema.org/a/SpLJBuaFudAFZ1nbygBwUgN6n.svg)](https://asciinema.org/a/SpLJBuaFudAFZ1nbygBwUgN6n)
