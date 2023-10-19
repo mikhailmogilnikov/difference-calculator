@@ -5,33 +5,16 @@ import yaml from 'js-yaml';
 
 const getFile = (filePath) => {
   try {
-    return readFileSync(
-      path.resolve(cwd(), filePath),
-      'utf-8',
-    );
+    return readFileSync(path.resolve(cwd(), filePath), 'utf-8');
   } catch (error) {
-    console.error('Error get file:', error);
+    // console.error('Error get file:', error);
     return null;
   }
 };
 
-const parserJSON = (filePath) => {
-  try {
-    return JSON.parse(filePath);
-  } catch (error) {
-    // console.error('Error parsing JSON:', error);
-    return null;
-  }
-};
+const parserJSON = (filePath) => JSON.parse(filePath);
 
-const parserYAML = (filePath) => {
-  try {
-    return yaml.load(filePath);
-  } catch (error) {
-    // console.error('Error parsing YAML:', error);
-    return null;
-  }
-};
+const parserYAML = (filePath) => yaml.load(filePath);
 
 const analizePath = (filePath) => {
   const pathParsed = getFile(filePath);

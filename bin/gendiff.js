@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
-import { cwd } from 'node:process';
-import analizePath from '../src/parser.js';
+import doCompareFlat from '../src/stylish.js';
 
-const gendiff = () => {
+const genDiff = () => {
   const program = new Command();
 
   program
@@ -15,12 +14,12 @@ const gendiff = () => {
     .option('-f, --format <type>', 'output format', 'stylish')
     .action((first, second, options) => {
       if (options.format === 'stylish') {
-        console.log(analizePath(first), analizePath(second), cwd());
+        console.log(doCompareFlat(first, second));
       }
     });
 
   program.parse();
 };
 
-export default gendiff;
-gendiff();
+export default genDiff;
+genDiff();
