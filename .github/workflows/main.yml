@@ -4,6 +4,9 @@ on:
   - push
   - pull_request
 
+env:
+  CI: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,3 +21,10 @@ jobs:
         run: make lint
       - name: Run application
         run: make gendiff-help
+      - name: Test & publish code coverage
+        uses: paambaati/codeclimate-action@v4.0.0
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CODECLIMATE_SECRET }}
+        with:
+          coverageCommand: make test-coverage
+          debug: true
