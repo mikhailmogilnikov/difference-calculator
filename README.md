@@ -14,3 +14,6 @@ JSON-files:
 
 YAML-files:
 [![asciicast](https://asciinema.org/a/SpLJBuaFudAFZ1nbygBwUgN6n.svg)](https://asciinema.org/a/SpLJBuaFudAFZ1nbygBwUgN6n)
+
+Nested objects:
+[![asciicast](https://asciinema.org/a/iLXEOG2Uc2Pk2smqL9liwJvv6.svg)](https://asciinema.org/a/iLXEOG2Uc2Pk2smqL9liwJvv6)

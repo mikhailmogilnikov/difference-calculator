@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
-import doCompareFlat from '../src/stylish.js';
+import doCompareStylish from '../src/stylish.js';
 
 const genDiff = () => {
   const program = new Command();
@@ -14,7 +14,7 @@ const genDiff = () => {
     .option('-f, --format <type>', 'output format', 'stylish')
     .action((first, second, options) => {
       if (options.format === 'stylish') {
-        console.log(doCompareFlat(first, second));
+        console.log(doCompareStylish(first, second));
       }
     });
 
