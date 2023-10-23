@@ -20,25 +20,25 @@ const compareStylish = (obj1, obj2) => {
         return value;
       };
 
-      if (Object.prototype.hasOwnProperty.call(currentObj1, key)) {
-        if (!Object.prototype.hasOwnProperty.call(currentObj2, key)) {
-          return `${tab}- ${key}: ${stringifyValue(value1, depth)}`;
-        }
+      if (key in currentObj1 && key in currentObj2) {
         if (value1 === value2) {
           return `${tab}  ${key}: ${stringifyValue(value1, depth)}`;
         }
+
         if (typeof value1 === 'object' && typeof value2 === 'object') {
           return `${tab}  ${key}: ${iter(value1, value2, depth + 2)}`;
         }
+
         return `${tab}- ${key}: ${stringifyValue(
           value1,
           depth,
         )}\n${tab}+ ${key}: ${stringifyValue(value2, depth)}`;
       }
 
-      if (!Object.prototype.hasOwnProperty.call(currentObj2, key)) {
+      if (key in currentObj1) {
         return `${tab}- ${key}: ${stringifyValue(value1, depth)}`;
       }
+
       return `${tab}+ ${key}: ${stringifyValue(value2, depth)}`;
     });
 
