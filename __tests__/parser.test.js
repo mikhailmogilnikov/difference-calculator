@@ -1,9 +1,9 @@
 import analizePath from '../src/parser.js';
 
-const path1 = '__fixtures__/file1.json';
-const path2 = '__fixtures__/file2.json';
+const path1 = '__fixtures__/flat/file1.json';
+const path2 = '__fixtures__/flat/file2.json';
 const path3 = '';
-const path4 = '__fixtures__/file1.yml';
+const path4 = '__fixtures__/flat/file1.yml';
 
 test('parser', () => {
   const actual1 = {

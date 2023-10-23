@@ -42,5 +42,44 @@ const doCompareFlat = (file1, file2) => {
   return buildString(comparedFiles);
 };
 
-export { compareFilesFlat, sortKeys, buildString };
+const compareStylish = (parsedFile1, parsedFile2) => {
+  const mainObj = { ...parsedFile1, ...parsedFile2 };
+  const sep = ' ';
+  const iter = (value, depth) => {
+    if (typeof value !== 'object' || value === null) {
+      return `${value}`;
+    }
+    const keys = sortKeys(Object.keys(value));
+    const replace = depth - 1 > 0 ? sep.repeat(depth - 2) : sep.repeat(2);
+    const replaceBr = depth - 1 > 0 ? sep.repeat(depth - 4) : '';
+    const result = keys
+      .map((key) => {
+        const newValue = iter(value[key], depth + 4);
+        return [`${replace}${key}: ${newValue}`];
+      })
+      .join('\n');
+
+    return `{\n${result}\n${replaceBr}}`;
+  };
+
+  return iter(mainObj, 0);
+};
+
+export { compareFilesFlat, sortKeys, buildString, compareStylish };
 export default doCompareFlat;
+
+// const val1 = parsedFile1[key];
+// const val2 = parsedFile2[key];
+// console.log(newValue)
+// if (val1 === newValue && val2 !== newValue) {
+//   return [`${replace}- ${key}: ${newValue}`];
+// }
+// if (val1 !== newValue && val2 === newValue) {
+//   if (val1 !== undefined) {
+//     return [`${replace}- ${key}: ${newValue}`];
+//   }
+//   return [`${replace}+ ${key}: ${newValue}`];
+// }
+// if (val1 === newValue && val2 === newValue) {
+//   return [`${replace}  ${key}: ${val1}`];
+// }
