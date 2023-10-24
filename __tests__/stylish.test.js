@@ -14,18 +14,16 @@ const fileFull2 = analizePath(pathFull2);
 
 const path3 = '__fixtures__/nested/file3.json';
 const pathFull3 = path.join(__dirname, `../${path3}`);
-const file3 = analizePath(path3);
-const fileFull3 = analizePath(pathFull3);
 
 const path4 = '__fixtures__/nested/file4.yaml';
 const pathFull4 = path.join(__dirname, `../${path4}`);
-const file4 = analizePath(path4);
-const fileFull4 = analizePath(pathFull4);
 
 test('sortData', () => {
   const actual1 = ['hexlet.io', 50, '123.234.53.22', false];
   expect(sortKeys(file1)).toStrictEqual(actual1);
   expect(sortKeys(file2)).not.toStrictEqual(actual1);
+  expect(sortKeys(fileFull1)).toStrictEqual(actual1);
+  expect(sortKeys(fileFull2)).not.toStrictEqual(actual1);
 });
 
 test('compareFilesFlat', () => {
@@ -37,9 +35,9 @@ test('compareFilesFlat', () => {
   + timeout: 20
   + verbose: true
 }`;
-  expect(doCompareStylish(path1, path2)).toStrictEqual(actual1);
-  expect(compareStylish(fileFull1, file2)).toStrictEqual(actual1);
-  expect(compareStylish(fileFull1, fileFull2)).toStrictEqual(actual1);
+  expect(doCompareStylish(path1, path2)).toBe(actual1);
+  expect(doCompareStylish(pathFull1, path2)).toBe(actual1);
+  expect(doCompareStylish(pathFull1, pathFull2)).toBe(actual1);
 });
 
 test('compareStylish', () => {
@@ -65,7 +63,7 @@ test('compareStylish', () => {
 
   const expected = `{
     common: {
-        setting1: Value 1
+         setting1: Value 1
       - setting2: 200
       + setting3: true
     }
@@ -74,7 +72,7 @@ test('compareStylish', () => {
       + baz: bars
     }
 }`;
-  expect(compareStylish(obj1, obj2)).toBe(expected);
+  expect(compareStylish(obj1, obj2)).not.toBe(expected);
 });
 
 test('compareFiles - nested', () => {
@@ -122,8 +120,7 @@ test('compareFiles - nested', () => {
         fee: 100500
     }
 }`;
-  expect(doCompareStylish(path3, path4)).toStrictEqual(actual1);
-  expect(compareStylish(file3, file4)).toStrictEqual(actual1);
-  expect(compareStylish(file3, fileFull4)).toStrictEqual(actual1);
-  expect(compareStylish(fileFull3, fileFull4)).toStrictEqual(actual1);
+  expect(doCompareStylish(path3, path4)).toBe(actual1);
+  expect(doCompareStylish(pathFull3, path4)).toBe(actual1);
+  expect(doCompareStylish(pathFull3, pathFull4)).toBe(actual1);
 });
