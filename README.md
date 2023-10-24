@@ -17,3 +17,7 @@ YAML-files:
 
 Nested objects:
 [![asciicast](https://asciinema.org/a/iLXEOG2Uc2Pk2smqL9liwJvv6.svg)](https://asciinema.org/a/iLXEOG2Uc2Pk2smqL9liwJvv6)
+
+## plain
+
+[![asciicast](https://asciinema.org/a/RMACGNgdMSKFepvQqEkbWNq4T.svg)](https://asciinema.org/a/RMACGNgdMSKFepvQqEkbWNq4T)

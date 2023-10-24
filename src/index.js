@@ -1,3 +1,3 @@
-import genDiff from '../bin/gendiff.js';
+import genDiff from './formatters/index.js';
 
 export default genDiff;
