@@ -1,4 +1,5 @@
 import analizePath from '../parser.js';
+import compareJson from './json.js';
 import comparePlain from './plain.js';
 import compareStylish from './stylish.js';
 
@@ -10,6 +11,8 @@ const genDiff = (first, second, format = 'stylish') => {
       return compareStylish(fileParsed1, fileParsed2);
     case 'plain':
       return comparePlain(fileParsed1, fileParsed2);
+    case 'json':
+      return compareJson(fileParsed1, fileParsed2);
     default:
       return 'Format not found';
   }
