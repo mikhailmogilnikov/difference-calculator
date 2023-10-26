@@ -21,7 +21,7 @@ const pathFull4 = path.join(__dirname, `../${path4}`);
 
 test('Unknown Formatter', () => {
   expect(genDiff(path1, path2, 'format')).toBe('Format not found');
-})
+});
 
 test('compareFiles - flat', () => {
   const actual1 = `{

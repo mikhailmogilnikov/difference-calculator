@@ -39,11 +39,11 @@ const compareJson = (currentObj1, currentObj2) => {
       };
     }
 
-		return {
-			name: key,
-			status: 'added',
-			value: stringifyValue(value2),
-		};
+    return {
+      name: key,
+      status: 'added',
+      value: stringifyValue(value2),
+    };
   });
 
   return JSON.stringify(result);

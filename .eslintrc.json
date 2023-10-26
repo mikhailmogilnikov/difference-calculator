@@ -7,8 +7,7 @@
   "extends": [
     "airbnb-base",
     "plugin:jest/recommended",
-    "eslint:recommended",
-    "prettier"
+    "eslint:recommended"
   ],
   "parserOptions": {
     "ecmaVersion": "latest",
