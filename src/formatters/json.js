@@ -46,7 +46,7 @@ const compareJson = (currentObj1, currentObj2) => {
 		};
   });
 
-  return JSON.stringify(result).replace(/\\/g, '').replace(/\n/g, '');
+  return JSON.stringify(result);
 };
 
 export default compareJson;
