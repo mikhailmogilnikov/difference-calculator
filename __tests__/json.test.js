@@ -1,5 +1,5 @@
 import path from 'node:path';
-import genDiff from '../src/formatters/index.js';
+import genDiff from '../index.js';
 
 const path1 = '__fixtures__/flat/file1.json';
 const pathFull1 = path.join(__dirname, `../${path1}`);
