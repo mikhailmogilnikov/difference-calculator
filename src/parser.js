@@ -19,8 +19,7 @@ const parserYAML = (filePath) => yaml.load(filePath);
 const analizePath = (filePath) => {
   const pathParsed = getFile(filePath);
   if (filePath.endsWith('.json')) return parserJSON(pathParsed);
-  if (filePath.endsWith('.yml') || filePath.endsWith('.yaml'))
-    return parserYAML(pathParsed);
+  if (filePath.endsWith('.yml') || filePath.endsWith('.yaml')) { return parserYAML(pathParsed); }
   return null;
 };
 
