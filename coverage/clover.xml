@@ -1,6 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1698258507557" clover="3.2.0">
-  <project timestamp="1698258507557" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
+<coverage generated="1698305883240" clover="3.2.0">
+  <project timestamp="1698305883240" name="All files">
+    <metrics statements="88" coveredstatements="87" conditionals="64" coveredconditionals="64" methods="16" coveredmethods="15" elements="168" coveredelements="166" complexity="0" loc="88" ncloc="88" packages="3" files="6" classes="6"/>
+    <package name="frontend-project-46">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.js" path="/Applications/dev/web/research/hexlet/frontend-project-46/index.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="frontend-project-46.src">
+      <metrics statements="12" coveredstatements="12" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
+      <file name="parser.js" path="/Applications/dev/web/research/hexlet/frontend-project-46/src/parser.js">
+        <metrics statements="12" coveredstatements="12" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="42" type="stmt"/>
+        <line num="8" count="42" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="15" count="31" type="stmt"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="20" count="42" type="stmt"/>
+        <line num="21" count="42" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="11" type="cond" truecount="4" falsecount="0"/>
+        <line num="23" count="10" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="frontend-project-46.src.formatters">
+      <metrics statements="76" coveredstatements="75" conditionals="58" coveredconditionals="58" methods="12" coveredmethods="11"/>
+      <file name="index.js" path="/Applications/dev/web/research/hexlet/frontend-project-46/src/formatters/index.js">
+        <metrics statements="10" coveredstatements="9" conditionals="5" coveredconditionals="5" methods="2" coveredmethods="1"/>
+        <line num="6" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="7" count="19" type="stmt"/>
+        <line num="8" count="19" type="stmt"/>
+        <line num="9" count="19" type="cond" truecount="4" falsecount="0"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+      </file>
+      <file name="json.js" path="/Applications/dev/web/research/hexlet/frontend-project-46/src/formatters/json.js">
+        <metrics statements="20" coveredstatements="20" conditionals="16" coveredconditionals="16" methods="3" coveredmethods="3"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="39" type="stmt"/>
+        <line num="5" count="39" type="stmt"/>
+        <line num="6" count="39" type="stmt"/>
+        <line num="7" count="96" type="stmt"/>
+        <line num="8" count="96" type="stmt"/>
+        <line num="10" count="96" type="stmt"/>
+        <line num="11" count="99" type="cond" truecount="4" falsecount="0"/>
+        <line num="12" count="21" type="stmt"/>
+        <line num="14" count="78" type="stmt"/>
+        <line num="17" count="96" type="cond" truecount="4" falsecount="0"/>
+        <line num="18" count="66" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="39" type="stmt"/>
+        <line num="22" count="27" type="cond" truecount="4" falsecount="0"/>
+        <line num="23" count="12" type="stmt"/>
+        <line num="26" count="15" type="stmt"/>
+        <line num="34" count="30" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="12" type="stmt"/>
+        <line num="42" count="18" type="stmt"/>
+        <line num="49" count="39" type="stmt"/>
+      </file>
+      <file name="plain.js" path="/Applications/dev/web/research/hexlet/frontend-project-46/src/formatters/plain.js">
+        <metrics statements="23" coveredstatements="23" conditionals="20" coveredconditionals="20" methods="3" coveredmethods="3"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="48" type="cond" truecount="3" falsecount="0"/>
+        <line num="6" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="9" type="stmt"/>
+        <line num="9" count="21" type="stmt"/>
+        <line num="11" count="15" type="stmt"/>
+        <line num="15" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="16" count="18" type="stmt"/>
+        <line num="17" count="18" type="stmt"/>
+        <line num="18" count="18" type="stmt"/>
+        <line num="19" count="69" type="stmt"/>
+        <line num="20" count="69" type="stmt"/>
+        <line num="21" count="69" type="cond" truecount="2" falsecount="0"/>
+        <line num="23" count="69" type="cond" truecount="4" falsecount="0"/>
+        <line num="24" count="39" type="cond" truecount="4" falsecount="0"/>
+        <line num="25" count="12" type="stmt"/>
+        <line num="28" count="27" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="12" type="stmt"/>
+        <line num="32" count="15" type="stmt"/>
+        <line num="37" count="30" type="cond" truecount="2" falsecount="0"/>
+        <line num="38" count="12" type="stmt"/>
+        <line num="41" count="18" type="stmt"/>
+        <line num="46" count="18" type="stmt"/>
+      </file>
+      <file name="stylish.js" path="/Applications/dev/web/research/hexlet/frontend-project-46/src/formatters/stylish.js">
+        <metrics statements="23" coveredstatements="23" conditionals="17" coveredconditionals="17" methods="4" coveredmethods="4"/>
+        <line num="3" count="96" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="7" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="8" count="39" type="stmt"/>
+        <line num="9" count="39" type="stmt"/>
+        <line num="10" count="39" type="stmt"/>
+        <line num="11" count="39" type="stmt"/>
+        <line num="12" count="96" type="stmt"/>
+        <line num="13" count="96" type="stmt"/>
+        <line num="15" count="96" type="stmt"/>
+        <line num="16" count="99" type="cond" truecount="4" falsecount="0"/>
+        <line num="17" count="21" type="stmt"/>
+        <line num="19" count="78" type="stmt"/>
+        <line num="22" count="96" type="cond" truecount="4" falsecount="0"/>
+        <line num="23" count="66" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="39" type="stmt"/>
+        <line num="27" count="27" type="cond" truecount="4" falsecount="0"/>
+        <line num="28" count="12" type="stmt"/>
+        <line num="31" count="15" type="stmt"/>
+        <line num="37" count="30" type="cond" truecount="2" falsecount="0"/>
+        <line num="38" count="12" type="stmt"/>
+        <line num="41" count="18" type="stmt"/>
+        <line num="44" count="39" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>

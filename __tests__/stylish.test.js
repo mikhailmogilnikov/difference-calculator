@@ -1,5 +1,11 @@
 import path from 'node:path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import { test, expect } from '@jest/globals';
 import genDiff from '../index.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const path1 = '__fixtures__/flat/file1.json';
 const pathFull1 = path.join(__dirname, `../${path1}`);
