@@ -1,5 +1,5 @@
-import analizePath from '../src/parser.js';
 import { test, expect } from '@jest/globals';
+import analizePath from '../src/parser.js';
 
 const path1 = '__fixtures__/flat/file1.json';
 const path2 = '__fixtures__/flat/file2.json';
